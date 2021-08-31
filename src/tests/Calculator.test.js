@@ -35,13 +35,13 @@ describe('Calculator', () => {
     const runningTotal = container.find('#running-total');
     const button7 = container.find('#number7')
     const button4 = container.find('#number4')
-    const buttonAdd = container.find('#operator_add')
+    const buttonSubtract = container.find('#operator-subtract')
     const buttonEqual = container.find('#operator-equals')
     button7.simulate('click')
-    buttonAdd.simulate('click')
+    buttonSubtract.simulate('click')
     button4.simulate('click')
     buttonEqual.simulate('click')
-    expect(runningTotal.text()).toEqual('5');
+    expect(runningTotal.text()).toEqual('3');
   })
 })
 
