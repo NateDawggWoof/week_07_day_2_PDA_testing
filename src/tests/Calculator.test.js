@@ -122,5 +122,22 @@ describe('Calculator', () => {
     expect(runningTotal.text()).toEqual('15');
   })
 
+  it('clear to 0', ()=>{
+    const runningTotal = container.find('#running-total');
+    const button3 = container.find('#number3')
+    const button5 = container.find('#number5')
+    const buttonMultiply = container.find('#operator-multiply')
+    const buttonEqual = container.find('#operator-equals')
+    const buttonClear = container.find('#clear')
+
+    button3.simulate('click')
+    buttonMultiply.simulate('click')
+    button5.simulate('click')
+    buttonEqual.simulate('click')
+    expect(runningTotal.text()).toEqual('15');
+    buttonClear.simulate('click')
+    expect(runningTotal.text()).toEqual('0');
+  })
+
 })
 
