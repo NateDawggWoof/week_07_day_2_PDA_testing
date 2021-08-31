@@ -17,5 +17,31 @@ describe('Calculator', () => {
     button4.simulate('click');
     expect(runningTotal.text()).toEqual('4');
   })
+
+  it('add to 5', ()=>{
+    const runningTotal = container.find('#running-total');
+    const button1 = container.find('#number1')
+    const button4 = container.find('#number4')
+    const buttonAdd = container.find('#operator_add')
+    const buttonEqual = container.find('#operator-equals')
+    button1.simulate('click')
+    buttonAdd.simulate('click')
+    button4.simulate('click')
+    buttonEqual.simulate('click')
+    expect(runningTotal.text()).toEqual('5');
+  })
+
+  it('subract to 3', ()=>{
+    const runningTotal = container.find('#running-total');
+    const button7 = container.find('#number7')
+    const button4 = container.find('#number4')
+    const buttonAdd = container.find('#operator_add')
+    const buttonEqual = container.find('#operator-equals')
+    button7.simulate('click')
+    buttonAdd.simulate('click')
+    button4.simulate('click')
+    buttonEqual.simulate('click')
+    expect(runningTotal.text()).toEqual('5');
+  })
 })
 
