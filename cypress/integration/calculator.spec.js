@@ -28,4 +28,21 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '15')
   })
 
+
+  it('test negetives', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-subtract').click();
+    cy.get('#number5').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '-3')
+  })
+
+  it('test negetives', () => {
+    cy.get('#number2').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number5').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '-3')
+  })
+
 })
